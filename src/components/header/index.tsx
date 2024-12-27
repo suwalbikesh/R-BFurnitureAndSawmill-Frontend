@@ -44,8 +44,9 @@ const Header = () => {
   }, [router])
 
   return (
-    <header className='bg-[#f4e6d5] shadow-2xl mx-4 mt-4 rounded-xl'>
-        <div className='container sticky px-5 py-2 top-0 flex items-center gap-6 xl:gap-4 justify-between mx-auto z-20 xl:itmes-center'>
+    // <header className='relative bg-[#f4e6d5] shadow-2xl mx-[.75rem] mt-[.75rem] rounded-xl'>
+    <header className='sticky top-4 bg-[#f4e6d5] shadow-2xl mx-4 mt-4 rounded-xl z-20'>
+        <div className='container px-5 py-2 flex items-center gap-6 xl:gap-4 justify-between mx-auto  xl:itmes-center'>
       <motion.div
         initial={{ x: -500, opacity: 0, scale: 0.5 }}
         animate={{ x: 0, opacity: 1, scale: 1 }}
@@ -137,7 +138,7 @@ const Header = () => {
         <span>|</span>
         <button className='group hover:scale-105 duration-300 relative bg-[url(/buttonbg.jpg)] text-sm font-bold leading-none uppercase rounded-xl px-4 py-3'>
         <div className="absolute inset-0 bg-black opacity-0 opacity-50 group-hover:opacity-40 transition-opacity  rounded-xl duration-300"></div>
-        <div className='relative text-white'>Login</div></button>
+        <div className='relative text-[#f4e6d5]'>Login</div></button>
         </div>
       </motion.div>
       </div>

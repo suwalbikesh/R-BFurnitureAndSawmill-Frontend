@@ -46,7 +46,7 @@ const HeroSection = () =>{
     }, [swiperRef])
   
     return (
-      <div className=''>
+      <div className='relative py-10'>
             <Swiper
               onBeforeInit={swiper => {
                 swiperRef.current = swiper
@@ -76,18 +76,33 @@ const HeroSection = () =>{
                 portfolios.map((data: any, index: number) => (
                   <SwiperSlide
                     key={index}
-                    className={`relative flex flex-col items-center`}
+                    className={`relative`}
                   >
-                    <div className='relative h-[600px] mx-4'>
-                      <Image src={data.image} layout='fill' alt='' objectPosition='right' className='relative' />
+                    <div className='flex flex-row items-center justify-end'>
+                    <div className='basis-[25%] h-[500px]'></div>
+                    <div className='basis-[75%]'>
+                    <div className='relative h-[500px]'>
+                      <Image src={data.image} layout='fill' objectFit="contain" alt=''/>
                     </div>
-                    <div className='absolute bg-[#f4e6d5] top-40 text-black'>sadfasdf</div>
+                    </div>
+                    <div className='absolute inset-0 left-16 my-auto flex item-center text-[#f4e6d5] h-[300px] bg-[#f4e6d5]/10 backdrop-blur-md w-[40%] rounded-xl'>
+                    <div className="absolute inset-0 bg-black opacity-20 transition-opacity rounded-xl duration-300"></div>
+                    <div className='relative my-auto mx-8 flex flex-col items-start gap-6 text-start'>
+                    <h1 className='text-2xl'>{data.title}</h1>
+                    <p className=''>{data.description}</p>
+                    <button className='group hover:scale-105 duration-300 relative bg-[url(/buttonbg.jpg)] text-sm font-bold leading-none uppercase rounded-xl px-4 py-3'>
+                      <div className="absolute inset-0 bg-black opacity-0 opacity-50 group-hover:opacity-40 transition-opacity  rounded-xl duration-300"></div>
+                      <div className='relative text-[#f4e6d5]'>Buy</div>
+                    </button>
+                    </div>
+                    </div>
+                    </div>
                     
                   </SwiperSlide>
                 ))}
             </Swiper>
-            {/* <button
-              className='absolute top-0 md:top-10 xl:top-0 mt-40 left-0 bg-white rounded-full shadow-lg h-12 w-12 text-2xl text-gray-600 hover:text-gray-400 focus:text-gray-400 -ml-6 focus:outline-none focus:shadow-outline z-10'
+             <button
+              className='absolute inset-y-0 my-auto left-5 bg-[#f4e6d5] rounded-full shadow-lg h-12 w-12 text-2xl text-gray-800 hover:text-gray-600 focus:text-gray-600 focus:outline-none focus:shadow-outline z-10 opacity-75'
               onClick={() => swiperRef.current?.slidePrev()}
             >
               <svg
@@ -101,7 +116,7 @@ const HeroSection = () =>{
               </svg>
             </button>
             <button
-              className='absolute top-0 md:top-10 xl:top-0 mt-40 right-0 bg-white rounded-full shadow-lg h-12 w-12 text-2xl text-gray-600 hover:text-gray-400 focus:text-gray-400 -mr-6 focus:outline-none focus:shadow-outline z-10'
+              className='absolute inset-y-0 my-auto right-5 bg-[#f4e6d5] rounded-full shadow-lg h-12 w-12 text-2xl text-gray-800 hover:text-gray-600 focus:text-gray-600 focus:outline-none focus:shadow-outline z-10 opacity-75'
               onClick={() => swiperRef.current?.slideNext()}
             >
               <svg
@@ -113,23 +128,23 @@ const HeroSection = () =>{
               >
                 <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M9 5l7 7-7 7'></path>
               </svg>
-            </button> */}
+            </button> 
  
   
           <div className='flex items-center pt-5 justify-center'>
-            {/* {portfolios.length &&
+            {portfolios.length &&
               portfolios?.map((data: any, index: number) => (
                 <button
                   key={index}
                   className={`${
                     activePortfolio !== index && 'opacity-50'
-                  } hover:opacity-100 focus:opacity-80 w-3 h-3 rounded-full bg-[#F7AB0A] mx-2 z-10`}
+                  } hover:opacity-100 focus:opacity-80 w-3 h-3 rounded-full bg-[#f4e6d5] mx-2 z-10`}
                   onClick={() => {
                     setActivePortfolio(index)
                     swiperRef.current?.slideTo(index)
                   }}
                 ></button>
-              ))} */}
+              ))}
           </div>
       </div>
     )
