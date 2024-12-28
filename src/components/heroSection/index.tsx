@@ -79,30 +79,30 @@ const HeroSection = () =>{
                     className={`relative`}
                   >
                     <div className='flex flex-row items-center justify-end'>
-                    <div className='basis-[25%] h-[500px]'></div>
-                    <div className='basis-[75%]'>
-                    <div className='relative h-[500px]'>
-                      <Image src={data.image} layout='fill' objectFit="contain" alt=''/>
+                      <div className='hidden md:block basis-[25%] h-[200px] lg:h-[500px]'></div>
+                      <div className='basis-[100%] md:basis-[75%]'>
+                      <div className='relative h-[400px] lg:h-[500px]'>
+                        <Image src={data.image} layout='fill' objectFit="contain" alt=''/>
+                      </div>
                     </div>
-                    </div>
-                    <div className='absolute inset-0 left-16 my-auto flex item-center text-[#f4e6d5] h-[300px] bg-[#f4e6d5]/10 backdrop-blur-md w-[40%] rounded-xl'>
-                    <div className="absolute inset-0 bg-black opacity-20 transition-opacity rounded-xl duration-300"></div>
-                    <div className='relative my-auto mx-8 flex flex-col items-start gap-6 text-start'>
-                    <h1 className='text-2xl'>{data.title}</h1>
-                    <p className=''>{data.description}</p>
-                    <button className='group hover:scale-105 duration-300 relative bg-[url(/buttonbg.jpg)] text-sm font-bold leading-none uppercase rounded-xl px-4 py-3'>
-                      <div className="absolute inset-0 bg-black opacity-0 opacity-50 group-hover:opacity-40 transition-opacity  rounded-xl duration-300"></div>
-                      <div className='relative text-[#f4e6d5]'>Buy</div>
-                    </button>
-                    </div>
-                    </div>
+                    <div className='absolute inset-0 left-0 mx-2 md:mx-0 md:left-4 lg:left-16 xl:left-28 my-auto flex item-center text-[#f4e6d5] h-[400px] md:h-[350px] lg:h-[300px] bg-[#f4e6d5]/10 backdrop-blur-md md:w-[60%] lg:w-[50%] xl:w-[40%] rounded-xl'>
+                      <div className="absolute inset-0 bg-black opacity-20 transition-opacity rounded-xl duration-300"></div>
+                      <div className='relative my-auto mx-4 md:mx-6 xl:mx-8 flex flex-col items-start gap-6 text-start'>
+                      <h1 className='text-2xl font-semibold uppercase tracking-[4px]'>{data.title}</h1>
+                      <p className=''>{data.description}</p>
+                      <button className='group shadow-xl hover:scale-105 duration-300 relative bg-[url(/buttonbg.jpg)] text-sm font-bold leading-none uppercase rounded-xl px-4 py-3'>
+                        <div className="absolute inset-0 bg-black opacity-0 opacity-50 group-hover:opacity-40 transition-opacity  rounded-xl duration-300"></div>
+                        <div className='relative text-[#f4e6d5] font-semibold tracking-[2.5px]'>Shop Now</div>
+                      </button>
+                      </div>
+                      </div>
                     </div>
                     
                   </SwiperSlide>
                 ))}
             </Swiper>
              <button
-              className='absolute inset-y-0 my-auto left-5 bg-[#f4e6d5] rounded-full shadow-lg h-12 w-12 text-2xl text-gray-800 hover:text-gray-600 focus:text-gray-600 focus:outline-none focus:shadow-outline z-10 opacity-75'
+              className='hidden md:block absolute inset-y-0 my-auto left-0 lg:left-4 bg-[#f4e6d5] rounded-full shadow-lg h-12 w-12 text-2xl text-gray-800 hover:text-gray-600 focus:text-gray-600 focus:outline-none focus:shadow-outline z-10 opacity-75'
               onClick={() => swiperRef.current?.slidePrev()}
             >
               <svg
@@ -116,7 +116,7 @@ const HeroSection = () =>{
               </svg>
             </button>
             <button
-              className='absolute inset-y-0 my-auto right-5 bg-[#f4e6d5] rounded-full shadow-lg h-12 w-12 text-2xl text-gray-800 hover:text-gray-600 focus:text-gray-600 focus:outline-none focus:shadow-outline z-10 opacity-75'
+              className='hidden md:block absolute inset-y-0 my-auto right-0 lg:right-4 bg-[#f4e6d5] rounded-full shadow-lg h-12 w-12 text-2xl text-gray-800 hover:text-gray-600 focus:text-gray-600 focus:outline-none focus:shadow-outline z-10 opacity-75'
               onClick={() => swiperRef.current?.slideNext()}
             >
               <svg

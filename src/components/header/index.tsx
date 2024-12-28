@@ -45,8 +45,8 @@ const Header = () => {
 
   return (
     // <header className='relative bg-[#f4e6d5] shadow-2xl mx-[.75rem] mt-[.75rem] rounded-xl'>
-    <header className='sticky top-4 bg-[#f4e6d5] shadow-2xl mx-4 mt-4 rounded-xl z-20'>
-        <div className='container px-5 py-2 flex items-center gap-6 xl:gap-4 justify-between mx-auto  xl:itmes-center'>
+    <header className='sticky top-4 bg-[#f4e6d5] shadow-2xl mx-2 md:mx-4 mt-2 md:mt-4 rounded-xl z-20'>
+        <div className='container px-4 xl:px-0 py-2 flex items-center gap-6 xl:gap-4 justify-between mx-auto  xl:itmes-center'>
       <motion.div
         initial={{ x: -500, opacity: 0, scale: 0.5 }}
         animate={{ x: 0, opacity: 1, scale: 1 }}
