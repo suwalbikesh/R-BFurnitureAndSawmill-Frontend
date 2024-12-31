@@ -8,7 +8,15 @@ export default {
   ],
   theme: {
     extend: {
-     
+      backgroundColor: {
+        'primary': '#f4e6d5', // Custom primary color
+        'secondary': '#3e3128', // secondary color
+      },
+      textColor:{
+        'primary':'#f4e6d5',
+        'secondary':'#e1af87',
+        'secondary2':'#8B4513'
+      }
     },
   },
   plugins: [],

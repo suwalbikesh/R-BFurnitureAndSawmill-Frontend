@@ -44,7 +44,7 @@ const Header = () => {
   }, [router])
 
   return (
-    <header className='bg-[#f4e6d5] shadow-2xl mx-4 mt-4 rounded-xl'>
+    <header className='bg-primary shadow-2xl mx-4 mt-4 rounded-xl'>
         <div className='container sticky px-5 py-2 top-0 flex items-center gap-6 xl:gap-4 justify-between mx-auto z-20 xl:itmes-center'>
       <motion.div
         initial={{ x: -500, opacity: 0, scale: 0.5 }}

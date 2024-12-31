@@ -13,14 +13,14 @@ export default function Home() {
   <div className="flex flex-col">
     {/* <div className="relative rounded-xl m-[.75rem]">
     <div className="absolute inset-0 bg-transparent backdrop-blur-xs transition-opacity rounded-xl duration-300"></div> */}
-    <Header />
+    
     <HeroSection />
-    <div className="bg-[#f4e6d5] mx-2 md:mx-4 rounded-lg">
+    {/* <div className="bg-primary mx-2 md:mx-4 rounded-lg"> */}
     <Support />
     {/* <div className='bg-gradient-to-r from-transparent via-[#8B4513] to-transparent h-[2px] mr-2'></div> */}
     <Catagory />
     <Products />
-    </div>
+    {/* </div> */}
     {/* </div> */}
   </div>
   );
