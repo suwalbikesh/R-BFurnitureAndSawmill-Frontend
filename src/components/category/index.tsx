@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 
 const Catagory = () => {
@@ -40,7 +40,7 @@ const Catagory = () => {
                 </div>
                 <div className="flex flex-wrap items-center justify-between w-[85%] px-10">
                     {categories.length && categories?.map((cat:any, index:number) =>
-                    <>
+                    
                     <div key={index} className={`group hover:scale-105 duration-700 flex flex-col justify-center relative h-[300px] w-[250px] rounded-lg bg-primary`} >
                             <div className='relative h-[220px] w-[250px] rounded-lg'>
                                 <Image src={cat.image} layout='fill' objectFit="cover" alt='' className="rounded-t-lg"/>
@@ -50,7 +50,6 @@ const Catagory = () => {
                             {cat.title}
                         </div>
                     </div>
-                    </>
                     )}
                     
                 </div>

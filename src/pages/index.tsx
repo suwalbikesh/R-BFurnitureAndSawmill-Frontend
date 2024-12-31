@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import localFont from "next/font/local";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
